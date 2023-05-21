@@ -1,0 +1,61 @@
+body {
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h1 {
+    font-family: Calibri;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 170px;
+}
+
+.thumbnail {
+    border-radius: 10%;
+    position: relative;
+    background-color: deepskyblue;
+}
+
+.thumbnail-content {
+    position: relative;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.thumbnail-title {
+    position: relative;
+    border-radius: 10%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    color: black;
+    padding: 5px;
+    text-align: center;
+}
+
+.paragraph {
+    font-family: Calibri;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+.paragraph {
+    overflow: hidden;
+    white-space: normal;
+    text-overflow: ellipsis;
+}
